@@ -164,10 +164,7 @@ definitions:
     type: object
     properties:
       accountType:
-        type: string
-        enum:
-          - business
-          - personal
+        $ref: '#/definitions/AccountType'
       accountId:
         type: string
         format: uuid
