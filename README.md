@@ -24,11 +24,11 @@ e-Wallet là 1 giải pháp thay thế cho các phương pháp thanh toán truy�
 {"merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6","amount": 1.1,"extraData": "eyJvcmRlcklkIjogIjM1NzA2Y2ViLTRhYWEtNDcxYi04OTg1LTQ1M2IyYjY2ZGI1OSJ9"} 
 sẽ có signature là: 225744eba143248ae232bf81d6366b66
 ```
-##Transaction Flow
+# Transaction Flow
 ![](./transaction.jpg)
 
-##Transcation Canceling Flow
+# Transcation Canceling Flow
 ![](./transactionCancel.jpg)
 
-##Transaction Life Circle
+# Transaction Life Circle
 ![](./transactionLifeCircle.jpg)
