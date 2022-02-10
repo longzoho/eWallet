@@ -278,15 +278,18 @@ definitions:
         type: string
       signature:
         type: string
+        format: "md5"
+        example: "225744eba143248ae232bf81d6366b66"
       status:
         type: string
         enum:
-          - CREATE
-          - CONFIRM
-          - VERIFY
-          - CANCEL
-          - EXPIRE
-          - SUCCESS
+          - INITIALIZED
+          - CONFIRMED
+          - VERIFIED
+          - COMPLETED
+          - CANCELED
+          - EXPIRED
+          - FAILED
   TransactionCreateRequest:
     type: object
     properties:

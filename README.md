@@ -18,4 +18,10 @@ e-Wallet là 1 giải pháp thay thế cho các phương pháp thanh toán truy�
  - Expired: transaction đã vượt quá 5 phút nhưng chưa hoàn thành
  - Canceled: transaction bị cancel bởi /transaction/cancel
  - Failed: transaction bị Fail do balance không đủ 
+
+**Signature** : Là một mã hash md5 (ví dụ: 68b344639ecd4fd9966abda41a59e689) được hash từ dữ payload của Transaction (ngoại trừ signature). 
+```Ví dụ:
+{"merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6","amount": 1.1,"extraData": "eyJvcmRlcklkIjogIjM1NzA2Y2ViLTRhYWEtNDcxYi04OTg1LTQ1M2IyYjY2ZGI1OSJ9"} 
+sẽ có signature là: 225744eba143248ae232bf81d6366b66
+```
  [![](./transaction.jpg)
