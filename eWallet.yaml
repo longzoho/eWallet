@@ -134,17 +134,6 @@ paths:
       responses:
         '200':
           description: OK
-          schema:
-            type: object
-            properties:
-              code:
-                type: string
-                enum:
-                  - SUC
-                  - BNE
-                  - UNK
-              message:
-                type: string
   /transaction/cancel:
     post:
       description: ''
