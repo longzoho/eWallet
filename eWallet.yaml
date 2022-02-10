@@ -48,10 +48,15 @@ paths:
           schema:
             type: string
             example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50SWQiOiJhZWQwOTJjYy1hMjE1LTQ3ZDAtYTJkYS05MjgyMzFkMTc5NDgifQ.G5O2u0foXbrBOjhxRtCNxVnVL2MK-07sKSn_RcNNMlo
+            description: include accountId and accountType
   /account/{accountId}/topup:
     post:
       description: ''
       parameters:
+        - in: header
+          name: Authentication
+          type: string
+          description: Issuer JWT Token
         - in: body
           name: payload
           schema:
@@ -169,15 +174,15 @@ definitions:
         type: string
         format: uuid
         example: 2fa606d2-9b42-41fc-9622-5f5ab2081082
+      balance:
+        type: number
+        format: double
+        example: 0.0
   AccountCreateRequest:
     type: object
     properties:
       accountType:
         $ref: '#/definitions/AccountType'
-      accountId:
-        type: string
-        format: uuid
-        example: eaa9b943-eefe-44d9-bc49-93df5bdfa079
   MerchantResponse:
     type: object
     properties:
