@@ -25,4 +25,5 @@ e-Wallet là 1 giải pháp thay thế cho các phương pháp thanh toán truy�
 sẽ có signature là: 225744eba143248ae232bf81d6366b66
 ```
  ![](./transaction.jpg)
+ 
  ![](./transactionCancel.jpg)
