@@ -24,11 +24,15 @@ e-Wallet là 1 giải pháp thay thế cho các phương pháp thanh toán truy�
 {"merchantId": "3fa85f64-5717-4562-b3fc-2c963f66afa6","amount": 1.1,"extraData": "eyJvcmRlcklkIjogIjM1NzA2Y2ViLTRhYWEtNDcxYi04OTg1LTQ1M2IyYjY2ZGI1OSJ9"} 
 sẽ có signature là: 225744eba143248ae232bf81d6366b66
 ```
-# Transaction Flow
+**Merchant JWT Token** : Đối với thông tin transaction được gửi qua lại giữa Merchant và e-Wallet, các thông tin đã được hash bởi mã md5. Tuy nhiên hacker hoàn toàn có thể thay đổi dữ liệu này. Do đó các request gửi qua lại sẽ được bổ xung thông tin Signature trong JWT
+
+**ExtraData** : ExtraData có thể là bất cứ thứ gì do hệ thống merchant định nghĩa. Mỗi khi e-Wallet update thông tin thay đổi transaction thì cần gửi kèm thông tin extraData. Dữ liệu này không có ý nghĩa trong hệ thống của e-Wallet, tuy nhiên sẽ có ý nghĩa ở hệ thống của merchant. Ví dụ: nếu merchant thêm thông tin orderId vào extraData, e-Wallet sẽ không hiểu orderId này là gì cả, tuy nhiên khi e-Wallet gửi thông tin transaction về cho Merchant, merchant sẽ đọc và biết transaction này đang sử lý cho orderId nào để có thể cập nhật trạng thái chính xác đến order đó.
+
+** Transaction Flow **
 ![](./transaction.jpg)
 
-# Transcation Canceling Flow
+** Transcation Canceling Flow **
 ![](./transactionCancel.jpg)
 
-# Transaction Life Circle
+** Transaction Life Circle **
 ![](./transactionLifeCircle.jpg)
