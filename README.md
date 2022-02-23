@@ -10,7 +10,7 @@ e-Wallet là 1 giải pháp thay thế cho các phương pháp thanh toán truy�
 
 **Merchant** : là những cửa hàng online hoặc cửa hàng truyền thống có đăng ký với e-Wallet. Khi đăng ký Merchant e-Wallet sẽ cung cấp 1 account
 
-**Transaction** : dùng để quản lý 1 phiên dao dịch, transaction sẽ có những trạng thái khác nhau
+**Transaction** : dùng để quản lý 1 phiên giao dịch, transaction sẽ có những trạng thái khác nhau
  - Initialized: transaction đã được tạo (đã xác định số tiền và account thụ hưởng)
  - Confirmed: transaction đã được confirm (đã xác định account thanh toán)
  - Verified: transaction đã được xác nhận (sẽ được thực hiện thanh toán sau đó)
